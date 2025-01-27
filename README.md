@@ -44,9 +44,9 @@ sudo systemctl enable nginx
 ## Download and extract NiFi
 ```bash
 cd /opt
-wget https://dlcdn.apache.org/nifi/1.28.1/nifi-1.28.1-bin.zip
-unzip nifi-1.28.1-bin.zip
-mv nifi-1.28.1 nifi
+wget https://dlcdn.apache.org/nifi/2.1.0/nifi-2.1.0-bin.zip
+unzip nifi-2.1.0-bin.zip
+mv nifi-2.1.0 nifi
 ```
 ### Create SSL directories
 ```bash
@@ -151,10 +151,10 @@ sudo vi /etc/nginx/conf.d/nifi-domain.conf
 ## Add the following content
 ```bash
 server {
-    server_name <nifi-domain>;
+    server_name nifi-reg.bluedotspace.io;
 
     location / {
-        proxy_pass https://10.0.0.4:9443;
+        proxy_pass https://10.0.0.4:18433;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
@@ -164,6 +164,8 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
         proxy_buffering off;
     }
+
+    listen 80;
 }
 ```
 ## Obtain an SSL certificate using Certbot
