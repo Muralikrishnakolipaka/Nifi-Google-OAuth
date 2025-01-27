@@ -151,10 +151,10 @@ sudo vi /etc/nginx/conf.d/nifi-domain.conf
 ## Add the following content
 ```bash
 server {
-    server_name nifi-reg.bluedotspace.io;
+    server_name <nifi-domain>;
 
     location / {
-        proxy_pass https://10.0.0.4:18433;
+        proxy_pass https://<private_IP>:9443;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
