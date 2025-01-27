@@ -1,4 +1,4 @@
-# Nifi-OAuth
+# Nifi-OAuth(Nifi 2.1.0)
 Nifi integrated with Google OAuth
 # NiFi Integration with Google OAuth and Nginx Configuration
 
