@@ -1,8 +1,7 @@
-# Nifi-OAuth(Nifi 2.1.0)
+# Apache NiFi Google OAuth 2.0 Integration Guide)
 Nifi integrated with Google OAuth
 # NiFi Integration with Google OAuth and Nginx Configuration
-
-This documentation provides a step-by-step guide for integrating Apache NiFi with Google OAuth and configuring Nginx as a reverse proxy.
+This comprehensive guide details how to integrate Apache NiFi (version 2.1.0) with Google OAuth 2.0 for secure authentication. It also covers configuring Nginx as a reverse proxy to enhance security and performance. Learn how to enable OAuth authentication in NiFi to protect your data flows.
 
 ---
 
